@@ -10,7 +10,7 @@ class CustomField(Raw):
 	"""
 	Custom field base class with validation features
 	"""
-	__schema__ = 'string'
+	# __schema__ = 'Raw'
 
 	def __init__(self, *args, **kwargs):
 		super(CustomField, self).__init__(**kwargs)
@@ -171,9 +171,11 @@ class OrderID(CustomField):
 	"""
 	Custom OrderID field
 	"""
+
 	___schema_type__ = 'integer'
 	___schema_format__ = 'integer'
 	___schema_example__ = 12345
+	__schema_description__ = 'blaat'
 
 	def validate(self, value):
 		if value.length != 5:

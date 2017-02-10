@@ -26,8 +26,8 @@ class ProductCollection(Resource):
 		Returns list of orders.
 		* test with markdown
 		"""
-		product = Products.query.filter_by(product='prod1').all()
-		return product
+		# product = Products.query.filter_by(product='prod1').all()
+		return Products.query.all()
 		# args = pagination_arguments.parse_args(request)
 		# page = args.get('page', 1)
 		# per_page = args.get('per_page', 10)

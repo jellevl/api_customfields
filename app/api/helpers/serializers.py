@@ -4,7 +4,8 @@ from app.api.helpers import custom_fields as CustomField
 
 products = api.model('products', {
     'id': fields.Integer(readOnly=True, description='The unique identifier of an order'),
-    'order_id': fields.Integer(required=True, description='Product order ID', min_length=5, max_length=5),
+    # 'order_id': CustomField.OrderID(required=True, description='Product order ID', min_length=5, max_length=5),
+    'order_id': CustomField.OrderID(description='Product order id'),
     'product_group': fields.String(required=True, description='Product group', example='product_group'),
     'product': fields.String(required=True, description='Product name', example='prod1'),
     'args': CustomField.Json(required=True, description='Product arguments in JSON format', example={"foo":"bar"}),
