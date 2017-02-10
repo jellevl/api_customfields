@@ -1,0 +1,8 @@
+config.py
+env*
+alembic*
+fabfile.py
+manage.py
+tests*
+app/api/orders*
+*.pyc*
